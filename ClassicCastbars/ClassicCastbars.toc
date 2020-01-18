@@ -1,9 +1,9 @@
-## Interface: 11302
+## Interface: 11303
 ## Title: ClassicCastbars
-## Notes: Adds castbars to the Target frame and Nameplates.
+## Notes: Adds castbars to various unitframes.
 ## SavedVariables: ClassicCastbarsDB
 ## Author: Wardz
-## Version: @project-version@
+## Version: v1.2.2
 ## X-Curse-Project-ID: 322865
 ## X-WoWI-ID: 24925
 

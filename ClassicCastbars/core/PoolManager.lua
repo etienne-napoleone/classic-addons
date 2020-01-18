@@ -29,7 +29,6 @@ end
 
 function PoolManager:InitializeNewFrame(frame)
     frame:Hide() -- New frames are always shown, hide it while we're updating it
-    frame.Flash:SetAlpha(0) -- we don't use this atm
 
     -- Some of the points set by SmallCastingBarFrameTemplate doesn't
     -- work well when user modify castbar size, so set our own points instead
@@ -40,6 +39,7 @@ function PoolManager:InitializeNewFrame(frame)
     frame.Text:SetPoint("CENTER")
 
     -- Clear any scripts inherited from frame template
+    frame:UnregisterAllEvents()
     frame:SetScript("OnLoad", nil)
     frame:SetScript("OnEvent", nil)
     frame:SetScript("OnUpdate", nil)
@@ -65,10 +65,10 @@ function PoolManager:GetFramePool()
     return framePool
 end
 
-function PoolManager:DebugInfo()
+--[[function PoolManager:DebugInfo()
     print(format("Created %d frames in total.", framesCreated))
     print(format("Currently active frames: %d.", framesActive))
-end
+end]]
 
 if date("%d.%m") == "01.04" then -- April Fools :)
     C_Timer.After(1800, function()
